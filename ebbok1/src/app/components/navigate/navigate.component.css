@@ -1,0 +1,76 @@
+/* Custom styles for the navbar */
+.custom-navbar {
+    background-color: #1e88e5; /* Bright blue shade */
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    position: relative;
+}
+
+/* App logo and name styling */
+.app-logo img {
+    vertical-align: middle;
+    border-radius: 50%; /* Circular logo */
+    margin-right: 10px; /* Space between logo and app name */
+}
+
+.app-name {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: white;
+    transition: color 0.3s ease; /* Transition for color */
+}
+
+/* Push navigation buttons to the right */
+.spacer {
+    flex: 1 1 auto;
+}
+
+/* Style the navigation links */
+ul {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Increased gap */
+    margin: 0;
+    padding: 0;
+}
+
+/* Button styles */
+button {
+    background-color: #ff4081; /* Pink accent color */
+    color: white;
+    font-weight: 600;
+    border: none; /* Remove border */
+    border-radius: 30px; /* Rounded buttons */
+    padding: 10px 20px; /* Increased padding */
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Button shadow */
+}
+
+/* Hover effect for buttons */
+button:hover {
+    background-color: white;
+    color: #ff4081; /* Match button color */
+    transform: translateY(-2px); /* Lift effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Deeper shadow */
+}
+
+/* Active link styling */
+button:active {
+    transform: translateY(0); /* Remove lift effect on click */
+}
+
+/* Additional styling for mobile responsiveness */
+@media (max-width: 768px) {
+    .app-name {
+        display: none; /* Hide app name on mobile */
+    }
+
+    ul {
+        gap: 10px; /* Smaller gap for mobile */
+    }
+
+    button {
+        padding: 8px 15px; /* Smaller padding for mobile */
+        font-size: 0.9rem; /* Adjust font size */
+    }
+}

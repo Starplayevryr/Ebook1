@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    height: 100vh; /* Full height */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+  
+    padding: 0 20px; /* Add horizontal padding for smaller screens */
+}
+
+
+.register-card {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+    padding: 30px; /* Padding inside the card */
+    margin-left: 30%;
+    margin-top: 2%;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-width: 400px; /* Max width for the card */
+    width: 100%; /* Full width for smaller screens */
+    text-align: center; /* Center text inside the card */
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column; /* Stack inputs vertically */
+    align-items: center; /* Center inputs horizontally */
+}
+
+input,
+select {
+    width: 100%; /* Full width */
+    padding: 12px; /* Padding inside input */
+    margin: 10px 0; /* Space between inputs */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size for inputs */
+}
+
+/* Button styling */
+button {
+    background-color: #1e88e5; /* Darker blue */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 12px; /* Padding for button */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    font-size: 16px; /* Font size for button */
+    transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #ff4081; /* Lighter blue on hover */
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 480px) {
+    .register-card {
+        padding: 20px; /* Reduce padding for smaller screens */
+        margin: 10px; /* Add margin for smaller screens */
+    }
+
+    input,
+    select {
+        font-size: 14px; /* Smaller font size for inputs */
+    }
+
+    button {
+        font-size: 14px; /* Smaller font size for buttons */
+    }
+}

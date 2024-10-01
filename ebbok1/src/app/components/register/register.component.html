@@ -1,0 +1,21 @@
+<app-navigate></app-navigate>
+
+<div class="register-card">
+  <h2>Register</h2>
+  <form [formGroup]="form" (ngSubmit)="submit()" class="register-form">
+      <input formControlName="name" placeholder="Name" type="text" required>
+      <input formControlName="email" placeholder="Email" type="email" required>
+      <input formControlName="password" placeholder="Password" type="password" required>
+      <input formControlName="age" placeholder="Age" type="number" required>
+
+      <label for="gender">Gender:</label>
+      <select formControlName="gender" id="gender" required>
+          <option value="" disabled selected>Select Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+      </select>
+
+      <button type="submit" [disabled]="form.invalid">Register</button>
+  </form>
+</div>

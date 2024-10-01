@@ -1,0 +1,77 @@
+<app-navigate></app-navigate>
+
+<div class="blog-form-container">
+  <form (ngSubmit)="createBlog()" class="blog-create-form">
+    <h2>Create New Blog Post</h2>
+
+    <!-- Title Input -->
+    <div class="form-group">
+      <label for="title" class="form-label">Title</label>
+      <input 
+        type="text" 
+        id="title" 
+        [(ngModel)]="title" 
+        name="title" 
+        required 
+        class="form-control"
+        placeholder="Enter the blog title"
+        aria-label="Blog Title"
+      >
+    </div>
+
+    <!-- Description Input -->
+    <div class="form-group">
+      <label for="description" class="form-label">Description</label>
+      <textarea 
+        id="description" 
+        [(ngModel)]="description" 
+        name="description" 
+        required 
+        class="form-control" 
+        rows="5"
+        placeholder="Write a brief description"
+        aria-label="Blog Description"
+      ></textarea>
+    </div>
+
+    <!-- Image Upload -->
+    <div class="form-group">
+      <label for="imageUpload" class="form-label">Upload Image</label>
+      <input 
+        type="file" 
+        id="imageUpload" 
+        (change)="onFileSelected($event)" 
+        accept="image/*" 
+        class="form-control-file"
+        aria-label="Upload Image"
+      >
+    </div>
+
+    <!-- Tags Input -->
+    <div class="form-group">
+      <label for="tags" class="form-label">Tags</label>
+      <input 
+        type="text" 
+        id="tags" 
+        [(ngModel)]="tagInput" 
+        (keyup.enter)="addTag()" 
+        placeholder="Add a tag and press enter" 
+        class="form-control"
+        aria-label="Tags"
+      >
+    </div>
+
+    <!-- Display Tags -->
+    <div class="tags-container mb-3">
+      <span *ngFor="let tag of tags" class="tag-badge">
+        {{ tag }} 
+        <button type="button" class="remove-tag-btn" (click)="removeTag(tag)">x</button>
+      </span>
+    </div>
+
+    <!-- Submit Button -->
+    <button mat-raised-button color="primary" type="submit" class="btn-submit">
+      Create Blog
+    </button>
+  </form>
+</div>

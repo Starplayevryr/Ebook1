@@ -1,0 +1,37 @@
+<app-navigate></app-navigate>
+
+<div class="settings-container">
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <mat-form-field appearance="fill" class="form-field">
+      <mat-label>Name</mat-label>
+      <input matInput id="name" formControlName="name" type="text" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="form-field">
+      <mat-label>Email</mat-label>
+      <input matInput id="email" formControlName="email" type="email" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="form-field">
+      <mat-label>Age</mat-label>
+      <input matInput id="age" formControlName="age" type="number" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="form-field">
+      <mat-label>Gender</mat-label>
+      <mat-select formControlName="gender">
+        <mat-option value="">Select Gender</mat-option>
+        <mat-option value="male">Male</mat-option>
+        <mat-option value="female">Female</mat-option>
+        <mat-option value="other">Other</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="form-field">
+      <mat-label>Password</mat-label>
+      <input matInput id="password" formControlName="password" type="password" />
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit">Update Settings</button>
+  </form>
+</div>

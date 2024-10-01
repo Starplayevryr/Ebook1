@@ -1,0 +1,163 @@
+/* General styling for the body */
+:host {
+    background-size: cover;
+    background-position: center;
+    display: block;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Card styling */
+mat-card {
+    max-width: 800px;
+    margin: 40px auto ;/* Centering the card */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: transform 0.3s ease-in-out;
+}
+
+mat-card:hover {
+    transform: scale(1.05);
+}
+
+mat-card-title h2 {
+    font-size: 2em;
+    color: #333;
+    text-align: center;
+}
+
+.card-content {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #555;
+    padding: 15px;
+}
+
+.call-to-action {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #007BFF;
+    margin-top: 10px;
+    transition: color 0.3s ease;
+}
+
+.call-to-action:hover {
+    color: #0056b3;
+    cursor: pointer;
+}
+
+/* Blog container styling */
+.blog-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+    margin-top: 30px;
+    min-height: 100vh; /* Optional: Ensures the container takes up full viewport height */
+}
+
+/* Each blog post styling */
+.blog-post {
+    width: 100%;
+    max-width: 800px;
+    margin: 1rem 0;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Blog image styling - uniform size for all images */
+.blog-image {
+    display: block;
+    margin: 10px auto;
+    width: 100%; /* Full width of the card */
+    max-width: 100%;
+    height: 400px; /* Fixed height for all images */
+    object-fit: cover; /* Ensures image covers the area without distortion */
+    border-radius: 8px; /* Optional: Rounded corners */
+}
+
+/* Full-width image for other sections */
+.full-width-image {
+    width: 100%;
+    height: 500px; /* Fixed height */
+    object-fit: cover; /* Ensures the image covers without distortion */
+    border-radius: 10px;
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.full-width-image:hover {
+    transform: scale(1.05);
+    filter: brightness(90%);
+}
+
+/* Blog card styling */
+.blog-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin: 15px 0;
+}
+
+/* Blog tags styling */
+.blog-tags {
+    margin-top: 15px;
+}
+
+.blog-tag {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    margin-right: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.blog-tag:hover {
+    background-color: #0056b3;
+}
+
+.posted-by {
+    font-size: 1em;
+    color: #666;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+    mat-card {
+        max-width: 100%;
+        margin: 10px;
+    }
+
+    mat-card-title h2 {
+        font-size: 1.8em;
+    }
+
+    .card-content {
+        font-size: 1.1em;
+    }
+
+    .call-to-action {
+        font-size: 1.1em;
+    }
+
+    .blog-image {
+        height: 180px; /* Slightly reduce height for smaller screens */
+    }
+}
+
+/* Animation for appearing */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

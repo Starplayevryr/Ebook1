@@ -1,0 +1,8 @@
+body {
+    background-image: url('/images/home.jpg'); /* Set background image */
+    background-size: cover; /* Cover the entire page */
+    background-position: center; /* Center the image */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    height: 100vh; /* Ensure body takes full height */
+}

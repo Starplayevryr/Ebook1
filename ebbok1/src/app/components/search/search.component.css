@@ -1,0 +1,53 @@
+/* General Styles */
+.search-container {
+    max-width: 800px; /* Set a max width for the search container */
+    margin: 20px auto; /* Center the container */
+    padding: 20px; /* Add padding inside the container */
+    border: 1px solid #ddd; /* Light border around the container */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    background-color: #ffffff; /* White background */
+}
+
+/* Heading Styles */
+h2 {
+    font-size: 24px; /* Set the font size for headings */
+    color: #333; /* Dark color for the headings */
+    margin-top: 20px; /* Space above headings */
+    margin-bottom: 10px; /* Space below headings */
+}
+
+/* Table Styles */
+table {
+    width: 100%; /* Full width tables */
+    border-collapse: collapse; /* Remove gaps between table cells */
+    margin-bottom: 20px; /* Space below tables */
+}
+
+th {
+    background-color: #f5f5f5; /* Light gray background for headers */
+    color: #333; /* Dark text for headers */
+    padding: 10px; /* Padding for header cells */
+    text-align: left; /* Align text to the left */
+    font-weight: bold; /* Bold text for headers */
+}
+
+td {
+    padding: 10px; /* Padding for data cells */
+    border-bottom: 1px solid #ddd; /* Light gray bottom border */
+}
+
+tr:hover {
+    background-color: #f1f1f1; /* Light gray background on row hover */
+}
+
+/* Button Styles */
+button {
+    margin-right: 8px; /* Space between buttons */
+}
+
+/* Loading Indicator Styles */
+.loading-indicator {
+    font-style: italic; /* Italicize loading messages */
+    color: #999; /* Gray color for loading messages */
+}

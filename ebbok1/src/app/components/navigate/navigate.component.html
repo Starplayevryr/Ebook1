@@ -1,0 +1,25 @@
+<mat-toolbar class="custom-navbar" color="primary">
+  <span class="app-logo">
+    <!-- Uncomment and add your logo if necessary -->
+    <!-- <img src="assets/logo.png" alt="App Logo" width="40"> -->
+  </span>
+  <span class="app-name">Ebook</span>
+  <span class="spacer"></span>
+
+  <!-- If the user is not authenticated -->
+  <ul *ngIf="!authenticated" class="auth-links">
+    <button mat-button routerLink="/">Home</button>
+    <button mat-button routerLink="/login">Login</button>
+    <button mat-button routerLink="/register">Register</button>
+  </ul>
+
+  <!-- If the user is authenticated -->
+  <ul *ngIf="authenticated" class="nav-links">
+    <button mat-button routerLink="/">Blogs</button>
+    <button mat-button routerLink="/createblogs">My Blogs</button>
+    <button mat-button routerLink="/settings">Settings</button>
+    <button mat-button routerLink="/search">Search</button>
+    <button mat-button routerLink="/chat">Chat</button>
+    <button mat-button (click)="logout()">Logout</button>
+  </ul>
+</mat-toolbar>
